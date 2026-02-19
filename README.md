@@ -1,16 +1,27 @@
-<p align="center"><img src="https://raw.githubusercontent.com/MercuryWorkshop/scramjet/main/assets/scramjet.png" height="200"></p>
+<h1 align="center">LoveHeart2</h1>
 
-<h1 align="center">Scramjet Demo</h1>
+<p align="center"><em>LoveHeart like you know it, but more powerful than ever.</em></p>
 
-The demo implementation of <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, the most advanced web proxy.
+<p align="center"><img src="public/sj.png" height="60"><br><small>Powered by Scramjet</small></p>
 
-<a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a> is an experimental interception based web proxy designed with security, developer friendliness, and performance in mind. This project is made to evade internet censorship and bypass arbitrary web browser restrictions.
+---
+
+LoveHeart2 is an advanced web proxy interface built on top of [Scramjet](https://github.com/MercuryWorkshop/scramjet), the most advanced web proxy. It features a sleek hacker terminal aesthetic while maintaining all the power and capabilities of the underlying Scramjet engine.
+
+[Scramjet](https://github.com/MercuryWorkshop/scramjet) is an experimental interception based web proxy designed with security, developer friendliness, and performance in mind. This project is made to evade internet censorship and bypass arbitrary web browser restrictions.
 
 #### Refer to <a href="https://github.com/HeyPuter/browser.js">browser.js</a> where this project will now receive updates outside of just bypassing internet censorship.
 
+## Features
+
+- 🖥️ **Terminal-style interface** - Classic green-on-black hacker aesthetic
+- ⚡ **Powered by Scramjet** - All the power of the most advanced web proxy
+- 🎨 **Scanlines & glow effects** - Authentic CRT monitor feel
+- 📱 **Responsive design** - Works on desktop and mobile
+
 ## Supported Sites
 
-Scramjet has CAPTCHA support! Some of the popular websites that Scramjet supports include:
+LoveHeart2 (via Scramjet) has CAPTCHA support! Some of the popular websites that are supported include:
 
 - [Google](https://google.com)
 - [Twitter](https://twitter.com)
@@ -72,3 +83,9 @@ You may also want to use [epoxy-transport](https://github.com/MercuryWorkshop/ep
 This example also now uses [wisp-js/server](https://www.npmjs.com/package/@mercuryworkshop/wisp-js) instead of the now outdated wisp-server-node. Please note that this can also be replaced with other wisp implementations like [wisp-server-python](https://github.com/MercuryWorkshop/wisp-server-python) which is highly recommended for production.
 
 See the [bare-mux](https://github.com/MercuryWorkshop/bare-mux) documentation for more information.
+
+---
+
+<p align="center">
+  <small>LoveHeart2 is powered by <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a></small>
+</p>

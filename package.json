@@ -1,7 +1,7 @@
 {
-	"name": "scramjet-demo",
+	"name": "loveheart2",
 	"version": "2.0.0",
-	"description": "The demo application for Scramjet, a high-performance web proxy.",
+	"description": "LoveHeart2, a high-performance web proxy.",
 	"type": "module",
 	"engines": {
 		"npm": ">=7.0.0",
@@ -16,7 +16,7 @@
 	"keywords": [
 		"proxy"
 	],
-	"author": "Mercury Workshop",
+	"author": "Alex Scott & Mercury Workshop",
 	"license": "GNU AFFERO",
 	"dependencies": {
 		"fastify": "^5.4.0",

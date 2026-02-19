@@ -6,13 +6,17 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
 		/>
-		<title>Scramjet</title>
+		<meta
+			name="description"
+			content="LoveHeart2 - A powerful web proxy for evading internet censorship and bypassing restrictions."
+		/>
+		<title>LoveHeart2</title>
 
-		<link rel="shortcut icon" content="favicon.webp" />
-	
+		<link rel="shortcut icon" href="favicon.ico" />
+
 		<script src="/scram/scramjet.all.js"></script>
 		<script src="/baremux/index.js"></script>
-		
+
 		<link rel="stylesheet" href="index.css" />
 		<script src="register-sw.js" defer></script>
 		<script src="search.js" defer></script>
@@ -20,18 +24,34 @@
 	</head>
 
 	<body>
-		<div title="Scramjet Logo" class="flex-center logo-wrapper header-center">
-			<img class="logo" src="sj.png" alt="Scramjet" />
-			<h1>Scramjet | MW</h1>
+		<!-- Splash Screen -->
+		<div id="splash-screen" class="splash-screen">
+			<div class="splash-content">
+				<img src="loveheart.svg" alt="LoveHeart2 Logo" class="splash-logo" />
+			</div>
 		</div>
-		<div class="flex-center desc left-margin">
-			<p>
-				Scramjet is an experimental interception based web proxy designed to
-				evade internet censorship, bypass arbitrary web browser restrictions and
-				innovate web proxy technologies.
+
+		<!-- Scanlines Overlay -->
+		<div class="scanlines"></div>
+
+		<!-- Main Logo Section -->
+		<div class="flex-center logo-wrapper header-center">
+			<h1>LoveHeart2</h1>
+			<p class="tagline">
+				LoveHeart like you know it, but more powerful than ever.
 			</p>
 		</div>
 
+		<!-- Description -->
+		<div class="flex-center desc left-margin">
+			<p>
+				LoveHeart2 is an advanced web proxy designed to evade internet
+				censorship, bypass arbitrary web browser restrictions, and provide
+				unrestricted access to the web.
+			</p>
+		</div>
+
+		<!-- Search Form -->
 		<form id="sj-form" class="flex-center">
 			<input
 				id="sj-search-engine"
@@ -40,10 +60,14 @@
 			/>
 			<input id="sj-address" type="text" placeholder="Search the web freely" />
 		</form>
+
+		<!-- Error Display -->
 		<div class="desc left-margin">
 			<p id="sj-error"></p>
 			<pre id="sj-error-code"></pre>
 		</div>
+
+		<!-- Footer -->
 		<footer>
 			<div>
 				<a
@@ -59,8 +83,19 @@
 				<a title="License information" href="credits.html">Credits</a>
 			</div>
 			<div>
-				<span>Scramjet &copy; MW 2025</span>
+				<span>LoveHeart2 &copy; 2026</span>
 			</div>
 		</footer>
+
+		<!-- Powered By Scramjet -->
+		<div class="powered-by">
+			<span>Powered by</span>
+			<img
+				class="powered-by-logo"
+				src="sj.png"
+				alt="Scramjet"
+				title="Powered by Scramjet"
+			/>
+		</div>
 	</body>
 </html>

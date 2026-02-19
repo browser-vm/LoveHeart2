@@ -1,12 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap");
+
+/* Terminal Color Variables */
+:root {
+	--terminal-green: #00ff00;
+	--terminal-green-dim: #00cc00;
+	--terminal-green-dark: #003300;
+	--bg-color: #0a0a0a;
+	--text-glow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green),
+		0 0 30px var(--terminal-green);
+	--text-glow-subtle: 0 0 5px var(--terminal-green);
+}
+
+/* Splash Screen Styles */
+.splash-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99999;
+	opacity: 1;
+	transition: opacity 0.8s ease-out;
+}
+
+.splash-screen.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.splash-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.splash-logo {
+	width: 400px;
+	max-width: 80vw;
+	height: auto;
+	animation: logoGlow 2s ease-in-out infinite;
+	filter: drop-shadow(0 0 20px var(--terminal-green));
+}
+
+@keyframes logoGlow {
+	0%, 100% {
+		filter: drop-shadow(0 0 20px var(--terminal-green));
+		transform: scale(1);
+	}
+	50% {
+		filter: drop-shadow(0 0 40px var(--terminal-green)) 
+		        drop-shadow(0 0 60px var(--terminal-green));
+		transform: scale(1.05);
+	}
+}
 
 body {
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-family: "Fira Code", "Source Code Pro", "Courier New", Courier, monospace;
 	margin: 0;
-	background: #111;
+	background: var(--bg-color);
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	color: var(--terminal-green);
+	position: relative;
+}
+
+/* Scanlines Overlay */
+.scanlines {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 9999;
+	background: repeating-linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.15),
+		rgba(0, 0, 0, 0.15) 1px,
+		transparent 1px,
+		transparent 2px
+	);
 }
 
 .flex-center {
@@ -31,33 +109,106 @@ body {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: #111;
+	background-color: var(--bg-color);
 }
 
 #sj-error {
 	color: #ff6666 !important;
 	white-space: pre-wrap;
+	text-shadow: 0 0 5px #ff6666;
 }
 
 #sj-error-code {
 	font-size: 12px;
-	color: #fff;
-	font-family: "Courier New", Courier, monospace;
+	color: var(--terminal-green);
+	font-family: "Fira Code", "Courier New", Courier, monospace;
+	text-shadow: var(--text-glow-subtle);
 }
 
-.logo {
-	height: 25vh;
+/* Main Logo Styling */
+.logo-wrapper h1 {
+	font-size: 3.5rem;
+	color: var(--terminal-green);
+	text-shadow: var(--text-glow);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin: 0;
+	animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.98;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Tagline Styling */
+.tagline {
+	color: var(--terminal-green-dim);
+	font-size: 1rem;
+	text-shadow: var(--text-glow-subtle);
+	margin-top: 10px;
+	text-align: center;
+	max-width: 600px;
+	line-height: 1.6;
 }
 
 .logo-wrapper .text {
 	font-size: 75px;
-	color: #fff;
+	color: var(--terminal-green);
+	text-shadow: var(--text-glow);
 }
 
-.logo-wrapper h1 {
-	color: white;
+/* Description Text */
+.desc p {
+	width: 560px;
+	color: var(--terminal-green-dim);
+	text-shadow: var(--text-glow-subtle);
+	line-height: 1.6;
 }
 
+/* Search Input Terminal Style */
+#sj-address {
+	background: rgba(0, 255, 0, 0.05);
+	font-family: "Fira Code", "Courier New", Courier, monospace;
+	padding: 0px 17px;
+	height: 48px;
+	border: 1px solid var(--terminal-green);
+	color: var(--terminal-green);
+	border-radius: 3px;
+	outline: none;
+	width: 350px;
+	margin-top: 5px;
+	border-radius: 50px;
+	font-size: 14px;
+	text-shadow: var(--text-glow-subtle);
+	box-shadow:
+		0 0 10px rgba(0, 255, 0, 0.3),
+		inset 0 0 10px rgba(0, 255, 0, 0.1);
+	transition: all 0.3s ease;
+	caret-color: var(--terminal-green);
+}
+
+#sj-address::placeholder {
+	color: var(--terminal-green-dim);
+	text-shadow: none;
+}
+
+#sj-address:focus {
+	border: 1px solid var(--terminal-green);
+	border-radius: 6px;
+	box-shadow:
+		0 0 20px rgba(0, 255, 0, 0.5),
+		inset 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+/* Footer Styling */
 footer {
 	margin: 0 16px;
 	margin-top: auto;
@@ -65,6 +216,7 @@ footer {
 	flex-direction: column;
 	line-height: 30px;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 footer > div {
@@ -79,8 +231,10 @@ footer a,
 footer span {
 	margin: 0 15px;
 	text-decoration: none;
-	color: #fff;
+	color: var(--terminal-green);
 	font-size: 15px;
+	text-shadow: var(--text-glow-subtle);
+	transition: text-shadow 0.3s ease;
 }
 
 footer a {
@@ -88,44 +242,53 @@ footer a {
 }
 
 footer a:hover {
+	text-shadow: var(--text-glow);
 	text-decoration: underline;
 }
 
-.desc p {
-	width: 560px;
-	color: rgba(253, 253, 253, 0.514);
+/* Powered By Section */
+.powered-by {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	opacity: 0.7;
+	transition: opacity 0.3s ease;
+	z-index: 100;
 }
 
-#sj-address {
-	background: none;
-	font-family: inherit;
-	padding: 0px 17px;
-	height: 48px;
-	border: 1px solid rgb(255, 255, 255, 0.2);
-	color: var(--text-color);
-	border-radius: 3px;
-	outline: none;
-	width: 350px;
-	margin-top: 5px;
-	border-radius: 50px;
-	color: #fff;
-	transition: border-radius 0.1s;
+.powered-by:hover {
+	opacity: 1;
 }
 
-#sj-address:focus {
-	border: 1px solid rgba(253, 253, 253, 0.514);
-	border-radius: 6px;
+.powered-by span {
+	color: var(--terminal-green);
+	font-size: 0.75rem;
+	text-shadow: var(--text-glow-subtle);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
 
+.powered-by-logo {
+	height: 28px;
+	filter: drop-shadow(0 0 5px var(--terminal-green));
+	opacity: 0.9;
+}
+
+/* Credit Page Styling */
 .credit {
 	border-radius: 10px;
 	padding: 10px;
 	display: block;
-	border: #fff 1px solid;
-	color: #fff;
+	border: 1px solid var(--terminal-green);
+	color: var(--terminal-green);
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 15px;
+	background: rgba(0, 255, 0, 0.02);
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
 }
 
 .credit label {
@@ -135,25 +298,80 @@ footer a:hover {
 
 .credit a,
 .credit label {
-	color: white;
+	color: var(--terminal-green);
 	text-decoration: underline;
 	text-align: right;
+	text-shadow: var(--text-glow-subtle);
 }
 
 .credit pre {
 	display: none;
 	width: 100%;
+	color: var(--terminal-green-dim);
 }
 
 .credit label::after {
-	content: "show license";
+	content: "[show license]";
 	cursor: pointer;
 }
 
 .credit input:checked + label::after {
-	content: "hide license";
+	content: "[hide license]";
 }
 
 .credit input:checked ~ pre {
 	display: block;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+	0%,
+	50% {
+		opacity: 1;
+	}
+	51%,
+	100% {
+		opacity: 0;
+	}
+}
+
+.cursor {
+	display: inline-block;
+	width: 10px;
+	height: 1.2em;
+	background: var(--terminal-green);
+	animation: blink 1s infinite;
+	margin-left: 2px;
+	vertical-align: middle;
+	box-shadow: 0 0 10px var(--terminal-green);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.logo-wrapper h1 {
+		font-size: 2rem;
+		letter-spacing: 0.1em;
+	}
+
+	.tagline {
+		font-size: 0.85rem;
+		padding: 0 20px;
+	}
+
+	.desc p {
+		width: 90%;
+	}
+
+	#sj-address {
+		width: 90%;
+		max-width: 350px;
+	}
+
+	.powered-by {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		justify-content: center;
+		margin-top: 20px;
+	}
 }
