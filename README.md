@@ -10,8 +10,6 @@ LoveHeart2 is an advanced web proxy interface built on top of [Scramjet](https:/
 
 [Scramjet](https://github.com/MercuryWorkshop/scramjet) is an experimental interception based web proxy designed with security, developer friendliness, and performance in mind. This project is made to evade internet censorship and bypass arbitrary web browser restrictions.
 
-#### Refer to <a href="https://github.com/HeyPuter/browser.js">browser.js</a> where this project will now receive updates outside of just bypassing internet censorship.
-
 ## Features
 
 - 🖥️ **Terminal-style interface** - Classic green-on-black hacker aesthetic
