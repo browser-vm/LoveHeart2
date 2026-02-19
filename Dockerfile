@@ -7,9 +7,9 @@ ENV NODE_ENV=production
 ARG NPM_BUILD="pnpm install --prod"
 EXPOSE 8080/tcp
 
-LABEL maintainer="Mercury Workshop"
-LABEL summary="Scramjet Demo Image"
-LABEL description="Example application of Scramjet"
+LABEL maintainer="Alex Scott and the BrowserVM Project"
+LABEL summary="LoveHeart2 Official Image"
+LABEL description="The official image for LoveHeart2, a powerful web proxy powered by Scramjet."
 
 WORKDIR /app
 
