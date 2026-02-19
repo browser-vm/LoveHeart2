@@ -6,7 +6,8 @@
 	--terminal-green-dim: #00cc00;
 	--terminal-green-dark: #003300;
 	--bg-color: #0a0a0a;
-	--text-glow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green),
+	--text-glow:
+		0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green),
 		0 0 30px var(--terminal-green);
 	--text-glow-subtle: 0 0 5px var(--terminal-green);
 }
@@ -60,7 +61,8 @@
 }
 
 body {
-	font-family: "Fira Code", "Source Code Pro", "Courier New", Courier, monospace;
+	font-family:
+		"Fira Code", "Source Code Pro", "Courier New", Courier, monospace;
 	margin: 0;
 	background: var(--bg-color);
 	display: flex;
