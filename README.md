@@ -34,17 +34,9 @@ Ensure you are not hosting on a datacenter IP for CAPTCHAs to work reliably alon
 
 ## Setup / Usage
 
-You will need Node.js 16.x (and above) and Git installed; below is an example for Debian/Ubuntu setup.
+You will need Node.js 16.x (and above) and Git installed; below is an example for a Github Codespace.
 
 ```
-sudo apt update
-sudo apt upgrade
-sudo apt install curl git nginx
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 nvm install 20
 nvm use 20
