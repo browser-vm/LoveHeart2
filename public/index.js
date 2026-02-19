@@ -1,29 +1,29 @@
 "use strict";
 
 // Splash Screen Logic - First visit only
-(function() {
-	const splashScreen = document.getElementById('splash-screen');
-	const SPLASH_KEY = 'loveheart2_splash_shown';
-	
+(function () {
+	const splashScreen = document.getElementById("splash-screen");
+	const SPLASH_KEY = "loveheart2_splash_shown";
+
 	// Check if splash has been shown before
 	if (localStorage.getItem(SPLASH_KEY)) {
 		// Hide splash immediately if already shown
 		if (splashScreen) {
-			splashScreen.style.display = 'none';
+			splashScreen.style.display = "none";
 		}
 	} else {
 		// First visit - show splash then fade out
 		// Mark as shown and fade out after animation
 		setTimeout(() => {
-			localStorage.setItem(SPLASH_KEY, 'true');
+			localStorage.setItem(SPLASH_KEY, "true");
 			if (splashScreen) {
-				splashScreen.classList.add('hidden');
+				splashScreen.classList.add("hidden");
 			}
-			
+
 			// Remove from DOM after transition
 			setTimeout(() => {
 				if (splashScreen) {
-					splashScreen.style.display = 'none';
+					splashScreen.style.display = "none";
 				}
 			}, 800);
 		}, 2500); // Show for 2.5 seconds

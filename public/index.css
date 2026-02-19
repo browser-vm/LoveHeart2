@@ -47,13 +47,14 @@
 }
 
 @keyframes logoGlow {
-	0%, 100% {
+	0%,
+	100% {
 		filter: drop-shadow(0 0 20px var(--terminal-green));
 		transform: scale(1);
 	}
 	50% {
-		filter: drop-shadow(0 0 40px var(--terminal-green)) 
-		        drop-shadow(0 0 60px var(--terminal-green));
+		filter: drop-shadow(0 0 40px var(--terminal-green))
+			drop-shadow(0 0 60px var(--terminal-green));
 		transform: scale(1.05);
 	}
 }
