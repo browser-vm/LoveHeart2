@@ -1,7 +1,7 @@
 {
-	"name": "Scramjet Demo",
-	"description": "Scramjet Demo App",
-	"repository": "https://github.com/.../Scramjet-Demo",
+	"name": "LoveHeart2",
+	"description": "The official LoveHeart2 app.",
+	"repository": "https://github.com/browser-vm/LoveHeart2",
 	"logo": "https://raw.githubusercontent.com/MercuryWorkshop/scramjet/main/assets/scramjet.png",
 	"keywords": ["scramjet"]
 }
