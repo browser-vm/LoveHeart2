@@ -46,13 +46,13 @@ fastify.register(fastifyCompress, {
 // Register CORS plugin
 fastify.register(fastifyCors, {
 	origin: true, // Allow all origins
-	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+	methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 	credentials: true,
 });
 
 // Register metrics plugin for performance monitoring
 fastify.register(fastifyMetrics, {
-	endpoint: '/metrics',
+	endpoint: "/metrics",
 });
 
 // Serve static files

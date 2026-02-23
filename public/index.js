@@ -6,14 +6,14 @@ const SHORTCUTS_KEY = "loveheart2_shortcuts";
 
 // Default settings
 const defaultSettings = {
-	scanlines: true
+	scanlines: true,
 };
 
 // Default shortcuts
 const defaultShortcuts = [
 	{ name: "Google", url: "https://www.google.com" },
 	{ name: "Wikipedia", url: "https://www.wikipedia.org" },
-	{ name: "GitHub", url: "https://github.com" }
+	{ name: "GitHub", url: "https://github.com" },
 ];
 
 // Load settings from localStorage
@@ -54,14 +54,14 @@ function applySettings() {
 function renderShortcuts() {
 	const shortcuts = loadShortcuts();
 	const shortcutsList = document.getElementById("shortcuts-list");
-	
+
 	if (shortcutsList) {
 		shortcutsList.innerHTML = "";
-		
+
 		shortcuts.forEach((shortcut, index) => {
 			const shortcutItem = document.createElement("div");
 			shortcutItem.className = "shortcut-item";
-			
+
 			const shortcutLink = document.createElement("a");
 			shortcutLink.href = "#";
 			shortcutLink.textContent = shortcut.name;
@@ -69,7 +69,7 @@ function renderShortcuts() {
 				e.preventDefault();
 				openShortcut(shortcut.url);
 			});
-			
+
 			shortcutItem.appendChild(shortcutLink);
 			shortcutsList.appendChild(shortcutItem);
 		});
@@ -80,14 +80,14 @@ function renderShortcuts() {
 function renderSettingsShortcuts() {
 	const shortcuts = loadShortcuts();
 	const shortcutsList = document.getElementById("settings-shortcuts-list");
-	
+
 	if (shortcutsList) {
 		shortcutsList.innerHTML = "";
-		
+
 		shortcuts.forEach((shortcut, index) => {
 			const shortcutItem = document.createElement("div");
 			shortcutItem.className = "shortcut-item";
-			
+
 			const shortcutLink = document.createElement("a");
 			shortcutLink.href = "#";
 			shortcutLink.textContent = shortcut.name;
@@ -95,14 +95,14 @@ function renderSettingsShortcuts() {
 				e.preventDefault();
 				openShortcut(shortcut.url);
 			});
-			
+
 			const deleteBtn = document.createElement("button");
 			deleteBtn.textContent = "×";
 			deleteBtn.title = "Delete shortcut";
 			deleteBtn.addEventListener("click", () => {
 				deleteShortcut(index);
 			});
-			
+
 			shortcutItem.appendChild(shortcutLink);
 			shortcutItem.appendChild(deleteBtn);
 			shortcutsList.appendChild(shortcutItem);
@@ -119,7 +119,7 @@ function openShortcut(url) {
 // Add shortcut
 function addShortcut(name, url) {
 	if (!name || !url) return;
-	
+
 	const shortcuts = loadShortcuts();
 	shortcuts.push({ name, url });
 	saveShortcuts(shortcuts);
@@ -140,28 +140,28 @@ function deleteShortcut(index) {
 function initSettings() {
 	// Apply settings
 	applySettings();
-	
+
 	// Render shortcuts
 	renderShortcuts();
 	renderSettingsShortcuts();
-	
+
 	// Setup settings button event listener
 	const settingsBtn = document.getElementById("settings-btn");
 	const settingsModal = document.getElementById("settings-modal");
 	const closeSettingsBtn = document.getElementById("close-settings");
-	
+
 	if (settingsBtn && settingsModal) {
 		settingsBtn.addEventListener("click", () => {
 			settingsModal.classList.remove("hidden");
 		});
 	}
-	
+
 	if (closeSettingsBtn && settingsModal) {
 		closeSettingsBtn.addEventListener("click", () => {
 			settingsModal.classList.add("hidden");
 		});
 	}
-	
+
 	// Close modal when clicking outside
 	if (settingsModal) {
 		settingsModal.addEventListener("click", (e) => {
@@ -170,7 +170,7 @@ function initSettings() {
 			}
 		});
 	}
-	
+
 	// Setup scanlines toggle
 	const scanlinesToggle = document.getElementById("scanlines-toggle");
 	if (scanlinesToggle) {
@@ -181,17 +181,17 @@ function initSettings() {
 			applySettings();
 		});
 	}
-	
+
 	// Setup add shortcut form
 	const addShortcutBtn = document.getElementById("add-shortcut");
 	const shortcutNameInput = document.getElementById("shortcut-name");
 	const shortcutUrlInput = document.getElementById("shortcut-url");
-	
+
 	if (addShortcutBtn) {
 		addShortcutBtn.addEventListener("click", () => {
 			const name = shortcutNameInput.value.trim();
 			const url = shortcutUrlInput.value.trim();
-			
+
 			if (name && url) {
 				addShortcut(name, url);
 				shortcutNameInput.value = "";
@@ -199,7 +199,7 @@ function initSettings() {
 			}
 		});
 	}
-	
+
 	// Add shortcut on Enter key
 	if (shortcutNameInput) {
 		shortcutNameInput.addEventListener("keypress", (e) => {
@@ -208,7 +208,7 @@ function initSettings() {
 			}
 		});
 	}
-	
+
 	if (shortcutUrlInput) {
 		shortcutUrlInput.addEventListener("keypress", (e) => {
 			if (e.key === "Enter") {
@@ -313,41 +313,41 @@ form.addEventListener("submit", async (event) => {
 });
 
 // Mobile navigation functionality
-const backBtn = document.getElementById('back-btn');
-const forwardBtn = document.getElementById('forward-btn');
-const refreshBtn = document.getElementById('refresh-btn');
+const backBtn = document.getElementById("back-btn");
+const forwardBtn = document.getElementById("forward-btn");
+const refreshBtn = document.getElementById("refresh-btn");
 
-backBtn.addEventListener('click', () => {
-	const frame = document.getElementById('sj-frame');
+backBtn.addEventListener("click", () => {
+	const frame = document.getElementById("sj-frame");
 	if (frame && frame.contentWindow && frame.contentWindow.history) {
 		frame.contentWindow.history.back();
 	}
 });
 
-forwardBtn.addEventListener('click', () => {
-	const frame = document.getElementById('sj-frame');
+forwardBtn.addEventListener("click", () => {
+	const frame = document.getElementById("sj-frame");
 	if (frame && frame.contentWindow && frame.contentWindow.history) {
 		frame.contentWindow.history.forward();
 	}
 });
 
-refreshBtn.addEventListener('click', () => {
-	const frame = document.getElementById('sj-frame');
+refreshBtn.addEventListener("click", () => {
+	const frame = document.getElementById("sj-frame");
 	if (frame && frame.contentWindow) {
 		frame.contentWindow.location.reload();
 	}
 });
 
 // Add keypress listener for Enter key on input
-address.addEventListener('keypress', (e) => {
-	if (e.key === 'Enter') {
-		form.dispatchEvent(new Event('submit'));
+address.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		form.dispatchEvent(new Event("submit"));
 	}
 });
 
 // Initialize settings when DOM is ready
-if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', initSettings);
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", initSettings);
 } else {
 	initSettings();
 }

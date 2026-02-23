@@ -1,21 +1,21 @@
 {
-  "name": "LoveHeart2",
-  "short_name": "LoveHeart2",
-  "description": "A powerful web proxy for evading internet censorship",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#00ff00",
-  "icons": [
-    {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    },
-    {
-      "src": "sj.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+	"name": "LoveHeart2",
+	"short_name": "LoveHeart2",
+	"description": "A powerful web proxy for evading internet censorship",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#0a0a0a",
+	"theme_color": "#00ff00",
+	"icons": [
+		{
+			"src": "favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		},
+		{
+			"src": "sj.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	]
 }

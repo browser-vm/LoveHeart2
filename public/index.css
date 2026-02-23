@@ -403,7 +403,7 @@ footer a:hover {
 	right: 0;
 	bottom: 0;
 	background-color: var(--terminal-green-dark);
-	transition: .4s;
+	transition: 0.4s;
 	border-radius: 34px;
 	border: 1px solid var(--terminal-green);
 }
@@ -416,7 +416,7 @@ footer a:hover {
 	left: 3px;
 	bottom: 3px;
 	background-color: var(--terminal-green);
-	transition: .4s;
+	transition: 0.4s;
 	border-radius: 50%;
 }
 
@@ -569,21 +569,21 @@ input:checked + .toggle-label:before {
 	.mobile-nav {
 		display: block;
 	}
-	
+
 	/* Adjust main content to account for fixed nav */
 	.logo-wrapper {
 		margin-top: 60px !important;
 	}
-	
+
 	.modal-content {
 		width: 95%;
 		max-height: 90vh;
 	}
-	
+
 	.shortcut-form {
 		flex-direction: column;
 	}
-	
+
 	.shortcut-form input {
 		min-width: auto;
 	}
