@@ -280,6 +280,260 @@ footer a:hover {
 	opacity: 0.9;
 }
 
+/* Settings Button */
+.settings-button-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.settings-btn {
+	background: rgba(0, 255, 0, 0.1);
+	border: 1px solid var(--terminal-green);
+	color: var(--terminal-green);
+	padding: 10px 20px;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.settings-btn:hover {
+	background: rgba(0, 255, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+	backdrop-filter: blur(5px);
+}
+
+.modal.hidden {
+	display: none;
+}
+
+.modal-content {
+	background: var(--bg-color);
+	border: 1px solid var(--terminal-green);
+	border-radius: 8px;
+	width: 90%;
+	max-width: 500px;
+	max-height: 80vh;
+	overflow-y: auto;
+	box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	border-bottom: 1px solid var(--terminal-green);
+}
+
+.modal-header h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: var(--terminal-green);
+	text-shadow: var(--text-glow);
+}
+
+.close-btn {
+	background: none;
+	border: none;
+	color: var(--terminal-green);
+	font-size: 24px;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+	color: var(--terminal-green-dim);
+}
+
+.modal-body {
+	padding: 20px;
+}
+
+/* Setting Item Styles */
+.setting-item {
+	margin-bottom: 20px;
+}
+
+.setting-item label {
+	display: block;
+	margin-bottom: 10px;
+	color: var(--terminal-green);
+	font-size: 14px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.toggle-label {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--terminal-green-dark);
+	transition: .4s;
+	border-radius: 34px;
+	border: 1px solid var(--terminal-green);
+}
+
+.toggle-label:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 3px;
+	bottom: 3px;
+	background-color: var(--terminal-green);
+	transition: .4s;
+	border-radius: 50%;
+}
+
+input:checked + .toggle-label {
+	background-color: var(--terminal-green);
+}
+
+input:checked + .toggle-label:before {
+	transform: translateX(26px);
+	background-color: var(--bg-color);
+}
+
+/* Shortcuts Styles */
+.shortcuts-container {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.shortcuts-container h3 {
+	color: var(--terminal-green);
+	text-shadow: var(--text-glow-subtle);
+	margin-bottom: 15px;
+}
+
+.shortcuts-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.shortcut-item {
+	background: rgba(0, 255, 0, 0.05);
+	border: 1px solid var(--terminal-green);
+	border-radius: 4px;
+	padding: 10px 15px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	transition: all 0.3s ease;
+}
+
+.shortcut-item:hover {
+	background: rgba(0, 255, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.shortcut-item a {
+	color: var(--terminal-green);
+	text-decoration: none;
+	font-size: 14px;
+	text-shadow: var(--text-glow-subtle);
+}
+
+.shortcut-item button {
+	background: none;
+	border: none;
+	color: var(--terminal-green);
+	cursor: pointer;
+	font-size: 16px;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.3s ease;
+}
+
+.shortcut-item button:hover {
+	color: #ff6666;
+	text-shadow: 0 0 5px #ff6666;
+}
+
+/* Shortcut Form */
+.shortcut-form {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px;
+	flex-wrap: wrap;
+}
+
+.shortcut-form input {
+	flex: 1;
+	min-width: 150px;
+	padding: 8px 12px;
+	background: rgba(0, 255, 0, 0.05);
+	border: 1px solid var(--terminal-green);
+	border-radius: 4px;
+	color: var(--terminal-green);
+	font-family: inherit;
+	font-size: 14px;
+}
+
+.shortcut-form input::placeholder {
+	color: var(--terminal-green-dim);
+}
+
+.shortcut-form button {
+	padding: 8px 16px;
+	background: rgba(0, 255, 0, 0.1);
+	border: 1px solid var(--terminal-green);
+	border-radius: 4px;
+	color: var(--terminal-green);
+	font-family: inherit;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.shortcut-form button:hover {
+	background: rgba(0, 255, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
 /* Mobile Navigation */
 .mobile-nav {
 	display: none; /* Hide on desktop */
@@ -319,6 +573,19 @@ footer a:hover {
 	/* Adjust main content to account for fixed nav */
 	.logo-wrapper {
 		margin-top: 60px !important;
+	}
+	
+	.modal-content {
+		width: 95%;
+		max-height: 90vh;
+	}
+	
+	.shortcut-form {
+		flex-direction: column;
+	}
+	
+	.shortcut-form input {
+		min-width: auto;
 	}
 }
 

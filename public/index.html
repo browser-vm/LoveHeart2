@@ -69,6 +69,50 @@
 			<pre id="sj-error-code"></pre>
 		</div>
 
+		<!-- Shortcuts Section -->
+		<div id="shortcuts-section" class="flex-center">
+			<div class="shortcuts-container">
+				<h3>Quick Links</h3>
+				<div id="shortcuts-list" class="shortcuts-list"></div>
+			</div>
+		</div>
+
+		<!-- Settings Button -->
+		<div class="settings-button-container">
+			<button id="settings-btn" class="settings-btn">⚙️ Settings</button>
+		</div>
+
+		<!-- Settings Modal -->
+		<div id="settings-modal" class="modal hidden">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Settings</h2>
+					<button id="close-settings" class="close-btn">×</button>
+				</div>
+				<div class="modal-body">
+					<!-- Scanlines Toggle -->
+					<div class="setting-item">
+						<label for="scanlines-toggle">CRT Scanlines</label>
+						<div class="toggle-switch">
+							<input type="checkbox" id="scanlines-toggle" checked>
+							<label for="scanlines-toggle" class="toggle-label"></label>
+						</div>
+					</div>
+
+					<!-- Shortcuts Management -->
+					<div class="setting-item">
+						<h3>Quick Links</h3>
+						<div class="shortcut-form">
+							<input id="shortcut-name" type="text" placeholder="Link name">
+							<input id="shortcut-url" type="text" placeholder="https://example.com">
+							<button id="add-shortcut">Add</button>
+						</div>
+						<div id="settings-shortcuts-list" class="shortcuts-list"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Footer -->
 		<footer>
 			<div>
