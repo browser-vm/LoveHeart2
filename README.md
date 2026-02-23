@@ -40,6 +40,7 @@ You will need Node.js 16.x (and above) and Git installed; below is an example fo
 
 nvm install 20
 nvm use 20
+corepack enable pnpm
 
 git clone https://github.com/MercuryWorkshop/Scramjet-App
 cd Scramjet-App
