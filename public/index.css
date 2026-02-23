@@ -280,6 +280,48 @@ footer a:hover {
 	opacity: 0.9;
 }
 
+/* Mobile Navigation */
+.mobile-nav {
+	display: none; /* Hide on desktop */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--bg-color);
+	padding: 10px;
+	z-index: 1000;
+	border-bottom: 1px solid var(--terminal-green);
+}
+
+.mobile-nav button {
+	background: rgba(0, 255, 0, 0.1);
+	border: 1px solid var(--terminal-green);
+	color: var(--terminal-green);
+	padding: 8px 16px;
+	margin-right: 10px;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.mobile-nav button:hover {
+	background: rgba(0, 255, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+	.mobile-nav {
+		display: block;
+	}
+	
+	/* Adjust main content to account for fixed nav */
+	.logo-wrapper {
+		margin-top: 60px !important;
+	}
+}
+
 /* Credit Page Styling */
 .credit {
 	border-radius: 10px;
@@ -368,6 +410,8 @@ footer a:hover {
 	#sj-address {
 		width: 90%;
 		max-width: 350px;
+		height: 56px; /* Taller input for easier typing */
+		font-size: 16px; /* Prevent iOS zoom on focus */
 	}
 
 	.powered-by {
@@ -376,5 +420,32 @@ footer a:hover {
 		right: auto;
 		justify-content: center;
 		margin-top: 20px;
+	}
+
+	footer a,
+	footer span {
+		margin: 0 10px;
+		padding: 8px 12px; /* Increase touch target */
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.splash-logo {
+		width: 250px;
+		max-width: 60vw;
+	}
+
+	.logo-wrapper h1 {
+		font-size: 1.5rem;
+	}
+
+	.tagline {
+		font-size: 0.75rem;
+	}
+
+	#sj-address {
+		height: 52px;
+		font-size: 15px;
 	}
 }

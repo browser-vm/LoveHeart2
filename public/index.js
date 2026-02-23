@@ -93,3 +93,36 @@ form.addEventListener("submit", async (event) => {
 	document.body.appendChild(frame.frame);
 	frame.go(url);
 });
+
+// Mobile navigation functionality
+const backBtn = document.getElementById('back-btn');
+const forwardBtn = document.getElementById('forward-btn');
+const refreshBtn = document.getElementById('refresh-btn');
+
+backBtn.addEventListener('click', () => {
+	const frame = document.getElementById('sj-frame');
+	if (frame && frame.contentWindow && frame.contentWindow.history) {
+		frame.contentWindow.history.back();
+	}
+});
+
+forwardBtn.addEventListener('click', () => {
+	const frame = document.getElementById('sj-frame');
+	if (frame && frame.contentWindow && frame.contentWindow.history) {
+		frame.contentWindow.history.forward();
+	}
+});
+
+refreshBtn.addEventListener('click', () => {
+	const frame = document.getElementById('sj-frame');
+	if (frame && frame.contentWindow) {
+		frame.contentWindow.location.reload();
+	}
+});
+
+// Add keypress listener for Enter key on input
+address.addEventListener('keypress', (e) => {
+	if (e.key === 'Enter') {
+		form.dispatchEvent(new Event('submit'));
+	}
+});

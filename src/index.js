@@ -4,6 +4,9 @@ import { hostname } from "node:os";
 import { server as wisp, logging } from "@mercuryworkshop/wisp-js/server";
 import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
+import fastifyCompress from "@fastify/compress";
+import fastifyCors from "@fastify/cors";
+import fastifyMetrics from "fastify-metrics";
 
 import { scramjetPath } from "@mercuryworkshop/scramjet/path";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
@@ -35,6 +38,24 @@ const fastify = Fastify({
 	},
 });
 
+// Register compression plugin for better performance on mobile
+fastify.register(fastifyCompress, {
+	threshold: 1024, // Compress responses larger than 1KB
+});
+
+// Register CORS plugin
+fastify.register(fastifyCors, {
+	origin: true, // Allow all origins
+	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+	credentials: true,
+});
+
+// Register metrics plugin for performance monitoring
+fastify.register(fastifyMetrics, {
+	endpoint: '/metrics',
+});
+
+// Serve static files
 fastify.register(fastifyStatic, {
 	root: publicPath,
 	decorateReply: true,
