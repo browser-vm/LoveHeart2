@@ -37,7 +37,6 @@ Ensure you are not hosting on a datacenter IP for CAPTCHAs to work reliably alon
 You will need Node.js 16.x (and above) and Git installed; below is an example for a Github Codespace.
 
 ```
-
 nvm install 20
 nvm use 20
 corepack enable pnpm
@@ -56,6 +55,16 @@ Run the server
 
 ```
 pnpm start
+```
+
+## Instant Usage
+Simply run the following to pull the Docker image:
+```
+docker pull browservm/loveheart2:main
+```
+Then start the docker image running on localhost:
+```
+docker run -p 8080:8080 browservm/loveheart2:main
 ```
 
 Resources for self-hosting:
