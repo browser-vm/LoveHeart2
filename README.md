@@ -58,11 +58,15 @@ pnpm start
 ```
 
 ## Instant Usage
+
 Simply run the following to pull the Docker image:
+
 ```
 docker pull browservm/loveheart2:main
 ```
+
 Then start the docker image running on localhost:
+
 ```
 docker run -p 8080:8080 browservm/loveheart2:main
 ```
