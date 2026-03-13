@@ -51,6 +51,7 @@ Install dependencies
 pnpm install
 ```
 
+Or if you want significantly faster installs, use the Bun package manager. I'll regularly update the Bun lockfile.
 Run the server
 
 ```
