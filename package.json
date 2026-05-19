@@ -28,7 +28,7 @@
 		"@mercuryworkshop/wisp-js": "^0.4.1",
 		"fastify": "^5.7.4",
 		"fastify-metrics": "^12.1.0",
-		"ws": "^8.19.0"
+		"ws": "^8.20.0"
 	},
 	"devDependencies": {
 		"eslint": "^9.39.4",
