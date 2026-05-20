@@ -27,7 +27,7 @@
 		"@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/v1.1.0/mercuryworkshop-scramjet-1.1.0.tgz",
 		"@mercuryworkshop/wisp-js": "^0.4.1",
 		"fastify": "^5.8.5",
-		"fastify-metrics": "^12.1.0",
+		"fastify-metrics": "^13.2.0",
 		"ws": "^8.20.1"
 	},
 	"devDependencies": {
