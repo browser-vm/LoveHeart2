@@ -36,8 +36,8 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0(fastify@5.8.5)
       ws:
-        specifier: ^8.19.0
-        version: 8.19.0(bufferutil@4.1.0)(utf-8-validate@6.0.4)
+        specifier: ^8.20.1
+        version: 8.20.1(bufferutil@4.1.0)(utf-8-validate@6.0.4)
     devDependencies:
       eslint:
         specifier: ^9.39.4
@@ -839,8 +839,8 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  ws@8.19.0:
-    resolution: {integrity: sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==}
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -1000,7 +1000,7 @@ snapshots:
       bufferutil: 4.1.0
       commander: 14.0.3
       ipaddr.js: 2.3.0
-      ws: 8.19.0(bufferutil@4.1.0)(utf-8-validate@6.0.4)
+      ws: 8.20.1(bufferutil@4.1.0)(utf-8-validate@6.0.4)
     transitivePeerDependencies:
       - utf-8-validate
 
@@ -1677,7 +1677,7 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@8.19.0(bufferutil@4.1.0)(utf-8-validate@6.0.4):
+  ws@8.20.1(bufferutil@4.1.0)(utf-8-validate@6.0.4):
     optionalDependencies:
       bufferutil: 4.1.0
       utf-8-validate: 6.0.4
