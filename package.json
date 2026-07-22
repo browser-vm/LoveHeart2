@@ -32,7 +32,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^9.39.4",
-		"prettier": "^3.8.3"
+		"prettier": "^3.9.6"
 	},
 	"packageManager": "pnpm@10.18.3",
 	"overrides": {
