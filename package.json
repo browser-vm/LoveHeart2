@@ -21,7 +21,7 @@
 	"dependencies": {
 		"@fastify/compress": "^8.3.1",
 		"@fastify/cors": "^11.2.0",
-		"@fastify/static": "^9.0.0",
+		"@fastify/static": "^10.1.2",
 		"@mercuryworkshop/bare-mux": "^2.1.9",
 		"@mercuryworkshop/libcurl-transport": "^1.5.2",
 		"@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/v1.1.0/mercuryworkshop-scramjet-1.1.0.tgz",
